@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>The විචාරේ</title>
+    <link rel="icon" href="logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* Centered Top Notification Modal Styling */
+#notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#notification p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#notification button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#notification button:first-child {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#notification button:last-child {
+    background-color: #25D366;
+    color: #fff;
+}
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+.year-links, .pdf-links {
+    margin: 20px 0;
+}
+
+.year-link, .pdf-links a {
+    display: block;
+    padding: 10px;
+    margin: 10px auto;
+    width: 200px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.year-link:hover, .pdf-links a:hover {
+    background-color: #555;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.mobile-menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dark-mode-btn {
+    background: none; /* Adjust background if needed */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor style */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) { /* Adjust the breakpoint as needed */
+    .nav-links {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack links vertically */
+        position: absolute; /* Positioning */
+        background: white; /* Background color */
+        width: 100%; /* Full width */
+        top: 60px; /* Adjust based on your navbar height */
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links when active */
+    }
+
+    .mobile-menu-toggle {
+        display: block; /* Show mobile menu toggle */
+    }
+}
+
+    </style>
+</head>
+<body>
+        <!-- Main Site Content (Initially Hidden) -->
+        <div id="mainContent" class="hidden">
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html" class="home-link">
+        <h1>The විචාරේ</h1>
+    </a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button></li>
+    </ul>
+</nav>
+
+    <h1>Select a Year</h1>
+    <div class="year-links">
+        <!-- Links to year-specific pages -->
+        <a href="#" class="year-link">2016 (WAIT FOR ADDING)</a>
+        <a href="#" class="year-link">2017 (WAIT FOR ADDING)</a>
+        <a href="#" class="year-link">2018 (WAIT FOR ADDING)</a>
+        <a href="#" class="year-link">2019 (WAIT FOR ADDING)</a>
+        <a href="#" class="year-link">2020 (21)(WAIT FOR ADDING)</a>
+        <a href="#" class="year-link">2021(22)(WAIT FOR ADDING)</a>
+        <a href="papers_2022.html" class="year-link">2022(23)</a>
+        <!-- Add more years as needed -->
+    </div>
+<!-- Sponsored Ad Section -->
+<div id="sponsoredAd" style="border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+    <h3>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</h3>
+    <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+        <img src="img/ad.png" alt="Sponsor Ad" style="max-width: 30%;">
+    </a>
+    <p>Join Now</p>
+</div>
+        <div id="notification">
+            <p>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</p>
+            <button onclick="closeNotification()">No Thanks</button>
+            <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+                <button>Join Now</button>
+            </a>
+   
+
+     </div>        
+    <footer class="footer">
+        <footer class="bg-gray-800 text-white mt-12">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+        <div class="footer-content">
+            <p>&copy; 2024 The විචාරේ. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+// Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode'); // Add or remove dark mode class
+    // Optionally, change button text or styles based on mode
+});
+
+</script>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+</body>
+</html>

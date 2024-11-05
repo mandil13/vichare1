@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="logo.jpeg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Our Team - The විචාරේ</title>
+
+    <style>
+        /* Define custom colors */
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --light-gray: #f5f7fa;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ccc;
+}
+
+.home-link {
+    text-decoration: none;
+    color: red;
+}
+
+.navbar h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+#darkModeToggle {
+    padding: 0.5rem;
+    background-color: red;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Notification Bar */
+.notification {
+    position: fixed;
+    top: -100px; /* Start hidden above the viewport */
+    left: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    transition: top 0.5s; /* Smooth slide down effect */
+    z-index: 1000;
+}
+
+.slide-down {
+    top: 0; /* Slide into view */
+}
+
+/* Buttons in Notification Bar */
+.notification button {
+    margin-left: 10px;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
+/* Centered Top Notification Modal Styling */
+#notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#notification p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#notification button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#notification button:first-child {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#notification button:last-child {
+    background-color: #25D366;
+    color: #fff;
+}
+
+
+
+        /* Main Content */
+        .main-content {
+            margin-top: 80px;
+            padding: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+
+        h1, h2 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Team Member Styles */
+        .team-member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .member-image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+
+        .member-info {
+            flex: 1;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            margin: 1rem 0;
+        }
+
+        .footer-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin: 0 10px;
+        }
+        
+        .mobile-menu-toggle {
+            display: none; /* Hidden by default */
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dark-mode-btn {
+            background: none; /* Adjust background if needed */
+            border: none; /* Remove border */
+            cursor: pointer; /* Change cursor style */
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) { /* Adjust the breakpoint as needed */
+            .nav-links {
+                display: none; /* Hide links by default */
+                flex-direction: column; /* Stack links vertically */
+                position: absolute; /* Positioning */
+                background: white; /* Background color */
+                width: 100%; /* Full width */
+                top: 60px; /* Adjust based on your navbar height */
+                left: 0;
+                z-index: 1000;
+            }
+        
+            .nav-links.show {
+                display: flex; /* Show links when active */
+            }
+        
+            .mobile-menu-toggle {
+                display: block; /* Show mobile menu toggle */
+            }
+        }
+        
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: none; /* Hide the menu items for smaller screens */
+    }
+
+    #darkModeToggle {
+        margin-left: auto;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .paper-box {
+        width: 90%; /* Make paper boxes wider on small screens */
+    }
+
+    .navbar h1 {
+        font-size: 1.25rem; /* Adjust title font size */
+    }
+}
+
+
+@media (max-width: 480px) {
+    .navbar h1 {
+        font-size: 1rem;
+    }
+
+    #darkModeToggle {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .download-btn,
+    .upload-btn {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .content {
+        padding: 1rem 0.5rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html" class="home-link">
+        <h1>The විචාරේ</h1>
+    </a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button></li>
+    </ul>
+</nav>
+
+<div id="notification">
+    <p>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</p>
+    <button onclick="closeNotification()">No Thanks</button>
+    <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+        <button>Join Now</button>
+    </a>
+</div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>About Our Team</h1>
+        <p>Meet the dedicated team behind The විචාරේ, committed to providing the best services to our community.</p>
+
+        <!-- Team Members -->
+        <h2>Our Team</h2>
+        <div class="team-member">
+            <img src="img/file.jpg" alt="Team Member 1" class="member-image">
+            <div class="member-info">
+                <h3>Mandil Dissanayake</h3>
+                <p>CEO , Founder & Technology Officer</p>
+                <p>Mandil has over 6 years of experience in the industry and is passionate about leading the team to success.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="path/to/member2.jpg" alt="Team Member 2" class="member-image">
+            <div class="member-info">
+                <h3>Nimesh Sadaruwan</h3>
+                <p>Technology Officer</p>
+                <p>Nimesh is an expert in technology and ensures that our services are innovative and effective.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="path/to/member3.jpg" alt="Team Member 3" class="member-image">
+            <div class="member-info">
+                <h3>Visal Premawardhana</h3>
+                <p>Resources Finder</p>
+                <p>Team member and supporting to find resoureces.</p>
+            </div>
+        </div>
+        <div class="team-member">
+            <img src="img/thenuka.jpeg" alt="Team Member 4" class="member-image">
+            <div class="member-info">
+                <h3>Thenuka Indrajith</h3>
+                <p>Resources Finder</p>
+                <p>Team member and supporting to find resoureces.</p>
+            </div>
+        </div>
+    </main>
+<!-- Sponsored Ad Section -->
+<div id="sponsoredAd" style="border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+    <h3>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</h3>
+    <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+        <img src="img/ad.png" alt="Sponsor Ad" style="max-width: 30%;">
+    </a>
+    <p>Join Now</p>
+</div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 The විචාරේ. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Privacy Policy</a>
+                <a href="contact.html" class="footer-link">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+                // Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+// Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode'); // Add or remove dark mode class
+    // Optionally, change button text or styles based on mode
+});
+
+    </script>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Papers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#mainContent" class="home-link">
+            <h1>Paper Hub</h1>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#team">Our Team</a></li>
+            <li><a href="#services">Our Services</a></li>
+        </ul>
+        <button id="darkModeToggle">Dark Mode</button>
+    </nav>
+
+    <!-- Main Content Section -->
+    <div id="mainContent">
+        <section class="download-section">
+            <h2>Download Papers</h2>
+            <div class="paper-box">
+                <p>Physics Paper</p>
+                <button class="download-btn" onclick="openModal('physics.pdf')">Download</button>
+            </div>
+            <div class="paper-box">
+                <p>Chemistry Paper</p>
+                <button class="download-btn" onclick="openModal('chemistry.pdf')">Download</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Box (Hidden by Default) -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Download Options</h3>
+            <div class="inner-box">
+                <p>Are you sure you want to download this paper?</p>
+                <button onclick="closeModal()">Cancel</button>
+                <a id="downloadLink" class="download-link" href="#" download>
+                    <button>Download PDF</button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

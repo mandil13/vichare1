@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>The විචාරේ</title>
+    <link rel="icon" href="logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Main Site Content (Initially Hidden) -->
+    <div id="mainContent" class="hidden">
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html" class="home-link">
+        <h1>The විචාරේ</h1>
+    </a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button></li>
+    </ul>
+</nav>
+
+<div id="notification">
+    <p>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</p>
+    <button onclick="closeNotification()">No Thanks</button>
+    <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+        <button>Join Now</button>
+    </a>
+</div>
+        <!-- Download Content Section -->
+        <section class="content">
+            <h2>WHAT DO YOU WANT <br> (ඔබට අවශ්‍ය දේ තෝරා ගන්න) </h2>
+            <div class="paper-box">
+                <p>Grade 10 (විචාර)</p>
+           <!-- Button to Redirect to Download Papers Page -->
+           <a href="10.html" id="enterButton" class="button">Open Site</a>
+            </div>
+
+            <div class="paper-box">
+                <p>Grade 11 (විචාර)</p>
+           <!-- Button to Redirect to Download Papers Page -->
+           <a href="11.html" id="enterButton" class="button">Open Site</a>
+            </div>
+          <div class="paper-box">
+                <p>Papers</p>
+           <!-- Button to Redirect to Download Papers Page -->
+           <a href="papers.html" id="enterButton" class="button">Open Site</a>
+            </div>
+            <div class="paper-box">
+                <p>රචනා 🔴 ( COIMNG SOON ) </p>
+           <!-- Button to Redirect to Download Papers Page -->
+           <a href="#" id="enterButton" class="button">Open Site</a>
+            </div>
+
+            <div class="paper-box">
+                <p>සාහිත්‍ය හා රසාස්වාදය 🔴 ( COIMNG SOON )</p>
+           <!-- Button to Redirect to Download Papers Page -->
+           <a href="#" id="enterButton" class="button">Open Site</a>
+            </div>
+
+  
+            <!-- Additional paper boxes as needed -->
+            <button class="upload-btn">Upload</button>
+        </section>
+<!-- Sponsored Ad Section -->
+<div id="sponsoredAd" style="border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+    <h3>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</h3>
+    <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+        <img src="img/ad.png" alt="Sponsor Ad" style="max-width: 30%;">
+    </a>
+    <p>Join Now</p>
+</div>
+<!-- Star Rating Section -->
+<section class="rating-section">
+    <h2>Rate Our Group</h2>
+    <form id="ratingForm">
+        <div class="star-rating">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        <div class="emoji-feedback">
+            <span class="emoji" data-value="1">😡</span>
+            <span class="emoji" data-value="2">😕</span>
+            <span class="emoji" data-value="3">😊</span>
+            <span class="emoji" data-value="4">😄</span>
+            <span class="emoji" data-value="5">😍</span>
+        </div>
+        <input type="hidden" id="ratingValue" name="rating" required>
+        <button type="submit">Submit Rating</button>
+    </form>
+    <p id="ratingMessage"></p>
+</section>
+
+<!-- Login Button -->
+<button id="loginButton" class="login-btn">Login</button>
+
+        <footer class="footer">
+            <footer class="bg-gray-800 text-white mt-12">
+                <div class="container mx-auto px-4 py-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-center md:text-left mb-4 md:mb-0">
+            <div class="footer-content">
+                <p>&copy; 2024 The විචාරේ. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">Privacy Policy</a>
+                    <a href="#" class="footer-link">Terms of Service</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        // Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+// Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+// Initialize EmailJS (Add your user ID here)
+emailjs.init("CUoQkAi7bqYNcIiRC");
+
+// Star Rating and Emoji Logic
+const stars = document.querySelectorAll(".star-rating .star");
+const emojis = document.querySelectorAll(".emoji-feedback .emoji");
+const ratingValue = document.getElementById("ratingValue");
+const ratingMessage = document.getElementById("ratingMessage");
+
+// Star selection
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+        stars.forEach(s => s.classList.remove("selected"));
+        star.classList.add("selected");
+        let currentStar = star.previousElementSibling;
+        while (currentStar) {
+            currentStar.classList.add("selected");
+            currentStar = currentStar.previousElementSibling;
+        }
+        ratingValue.value = star.getAttribute("data-value");
+    });
+});
+
+
+// Emoji selection
+emojis.forEach(emoji => {
+    emoji.addEventListener("click", () => {
+        emojis.forEach(e => e.classList.remove("selected"));
+        emoji.classList.add("selected");
+        ratingValue.value = emoji.getAttribute("data-value");
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize EmailJS with your User ID
+    emailjs.init("CUoQkAi7bqYNcIiRC");
+
+    const stars = document.querySelectorAll(".star-rating .star");
+    const ratingValue = document.getElementById("ratingValue");
+    const ratingMessage = document.getElementById("ratingMessage");
+
+    // Star rating click event
+    stars.forEach(star => {
+        star.addEventListener("click", () => {
+            // Set rating value
+            const selectedRating = star.getAttribute("data-value");
+            ratingValue.value = selectedRating;
+
+            // Update UI to show selected stars
+            stars.forEach(s => s.classList.remove("selected"));
+            star.classList.add("selected");
+            let currentStar = star.previousElementSibling;
+            while (currentStar) {
+                currentStar.classList.add("selected");
+                currentStar = currentStar.previousElementSibling;
+            }
+        });
+    });
+
+    // Form submission
+    const ratingForm = document.getElementById("ratingForm");
+
+    ratingForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form refresh
+
+        if (!ratingValue.value) {
+            ratingMessage.textContent = "Please select a rating!";
+            return;
+        }
+
+        const templateParams = {
+            rating: ratingValue.value, // The rating value for the email
+        };
+
+        // Send email using EmailJS
+        emailjs.send("sservice_izc9cxg", "template_buc5cn7", templateParams)
+            .then(() => {
+                ratingMessage.textContent = "Thank you for your rating!";
+                stars.forEach(star => star.classList.remove("selected"));
+                ratingForm.reset();
+            })
+            .catch(error => {
+                ratingMessage.textContent = "Failed to send rating. Please try again.";
+                console.error("EmailJS Error:", error);
+            });
+    });
+});
+
+
+// Handle Rating Form Submission
+const ratingForm = document.getElementById("ratingForm");
+
+ratingForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const rating = ratingValue.value;
+
+    if (!rating) {
+        ratingMessage.textContent = "Please select a rating!";
+        return;
+    }
+
+    const templateParams = { rating: rating };
+
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+        .then(() => {
+            ratingMessage.textContent = "Thank you for your rating!";
+            ratingForm.reset();
+            stars.forEach(star => star.classList.remove("selected"));
+            emojis.forEach(emoji => emoji.classList.remove("selected"));
+        })
+        .catch(error => {
+            ratingMessage.textContent = "Failed to send rating. Please try again.";
+            console.error("EmailJS Error:", error);
+        });
+});
+
+</script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

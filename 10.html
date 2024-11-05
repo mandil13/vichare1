@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>The විචාරේ</title>
+    <link rel="icon" href="logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* Centered Top Notification Modal Styling */
+#notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#notification p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#notification button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+#notification button:first-child {
+    background-color: #f44336;
+    color: #fff;
+}
+
+#notification button:last-child {
+    background-color: #25D366;
+    color: #fff;
+}
+
+
+    </style>
+</head>
+<body>
+        <!-- Main Site Content (Initially Hidden) -->
+        <div id="mainContent" class="hidden">
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <a href="index.html" class="home-link">
+        <h1>The විචාරේ</h1>
+    </a>
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="team.html">Our Team</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button></li>
+    </ul>
+</nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Download Papers Section -->
+        <section class="download-section">
+            <h2>Grade 10 විචාර</h2>
+            <p>🔴මෙහිදී Download Button එක එබීමෙන් පසු විචාර Download වනු ඇත.🔴</p>
+            <div class="paper-box">
+                <p>සතර කන් මන්ත්‍රණය</p>
+                <a href="https://drive.google.com/file/d/1cEx7w2t654KO_s74oNZAHRqwTqB2O161/view?usp=sharing" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+        <!-- Sponsored Ad Section (Initially Hidden) -->
+    <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                 <h3>Hire Your Ad Place</h3>
+              <a href="https://example.com" target="_blank">
+             <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+          </a>
+         <p>Hire Your Ad Place</p>
+</div>
+            </div>
+            <div class="paper-box">
+                <p>ගුත්තිල වෙණ නද</p>
+                <a href="https://drive.google.com/file/d/1lIW5uCGyinTJoMRnLYSQyP2I4PEGSB1Z/view?usp=drive_link" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+        <!-- Sponsored Ad Section (Initially Hidden) -->
+    <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                 <h3>Hire Your Ad Place</h3>
+              <a href="https://example.com" target="_blank">
+             <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+          </a>
+         <p>Hire Your Ad Place</p>
+</div>
+            </div>
+            <div class="paper-box">
+                <p>හානා හීය පානා අඩහැරෙන් දැනේ</p>
+               <!-- Download Link -->
+<!-- Download Button -->
+    <a href="https://drive.google.com/file/d/1wnTSgngvyiDfO-D3hhSPsLJnsCMOR5_S/view?usp=sharing" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+    <!-- Sponsored Ad Section (Initially Hidden) -->
+     <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                <h3>Hire Your Ad Place</h3>
+                <a href="https://example.com" target="_blank">
+        <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+         </a>
+    <p>Hire Your Ad Place</p>
+</div>
+</div>
+            <div class="paper-box">
+                <p>බැද්දේගම</p>
+                <a href="https://drive.google.com/file/d/1LK-8FLwJ3Mb35mvPviNoJBlM9qzbqRPx/view?usp=drive_link" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+        <!-- Sponsored Ad Section (Initially Hidden) -->
+    <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                 <h3>Hire Your Ad Place</h3>
+              <a href="https://example.com" target="_blank">
+             <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+          </a>
+         <p>Hire Your Ad Place</p>
+</div>
+            </div>
+            <div class="paper-box">
+                <p>මුනි සිරිපා සිඹිමින්නේ</p>
+                <a href="https://drive.google.com/file/d/1mX8MTH_ilYWMH6oB7VZMzIPIp88IesOc/view?usp=sharing" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+    <!-- Sponsored Ad Section (Initially Hidden) -->
+        <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                <h3>Hire Your Ad Place</h3>
+                <a href="https://example.com" target="_blank">
+         <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+            </a>
+    <p>Check out our sponsor’s products and services!</p>
+            </div>
+            </div>
+            <div class="paper-box">
+                <p>ගංගාවේ සංගීතය</p>
+                <a href="https://drive.google.com/file/d/1lIW5uCGyinTJoMRnLYSQyP2I4PEGSB1Z/view?usp=drive_link" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+                <!-- Sponsored Ad Section (Initially Hidden) -->
+                <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                    <h3>Hire Your Ad Place</h3>
+                    <a href="https://example.com" target="_blank">
+                        <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+                    </a>
+                    <p>#</p>
+            </div>
+            </div>
+            <div class="paper-box">
+                <p>ලෙන අතහැර යාම</p>
+                <a href="https://drive.google.com/file/d/1Y_cYGi94ZJ3VioSc3-Q1GLs0u8Q5koMn/view?usp=drive_link" class="download-btn" onclick="showAdAndRedirect()">Download</a>
+                <!-- Sponsored Ad Section (Initially Hidden) -->
+                <div id="sponsoredAd" style="display: none; border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+                    <h3>Hire Your Ad Place</h3>
+                    <a href="https://example.com" target="_blank">
+                        <img src="https://via.placeholder.com/300x100" alt="Sponsor Ad" style="max-width: 100%;">
+                    </a>
+                    <p>#</p>
+            <!-- Add more paper boxes as needed -->
+        </section>
+        <div id="notification">
+            <p>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</p>
+            <button onclick="closeNotification()">No Thanks</button>
+            <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+                <button>Join Now</button>
+            </a>
+        </div>    
+        <!-- Sponsored Ad Section -->
+<div id="sponsoredAd" style="border: 2px solid #ccc; padding: 10px; margin: 20px; text-align: center;">
+    <h3>අපගේ අලුත්ම updates සහ විචාර ලබා ගැනීමට අපගේ whatsapp channel එකට සම්බන්ධ වන්න 😊</h3>
+    <a href="https://whatsapp.com/channel/0029VatV4w7CHDyqKCpNOm2z" target="_blank">
+        <img src="img/ad.png" alt="Sponsor Ad" style="max-width: 30%;">
+    </a>
+    <p>Join Now</p>
+</div>    
+    <footer class="footer">
+        <footer class="bg-gray-800 text-white mt-12">
+            <div class="container mx-auto px-4 py-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+        <div class="footer-content">
+            <p>&copy; 2024 The විචාරේ. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+
+function showAdAndRedirect() {
+    // Display the ad section
+    document.getElementById('sponsoredAd').style.display = 'block';
+
+    // Redirect to the download link after 30 seconds
+    setTimeout(() => {
+        window.location.href = "https://drive.google.com/file/d/1cEx7w2t654KO_s74oNZAHRqwTqB2O161/view?usp=sharing";
+    }, 30000); // 30 seconds delay
+}
+// Close the notification modal
+function closeNotification() {
+    document.getElementById('notification').style.display = 'none';
+}
+
+// Optional: Automatically hide the modal after a few seconds
+setTimeout(() => {
+    closeNotification();
+}, 10000); // Hides after 10 seconds
+
+// Mobile Menu Toggle
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.getElementById('navLinks');
+
+mobileMenuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
+
+// Dark Mode Toggle Functionality
+const darkModeToggle = document.getElementById('darkModeToggle');
+darkModeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode'); // Add or remove dark mode class
+    // Optionally, change button text or styles based on mode
+});
+
+</script>
+        <!-- JavaScript -->
+        <script src="scr.js"></script>
+</body>
+</html>
